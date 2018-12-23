@@ -21,7 +21,7 @@
 	 <div id="monitor" style="visibility: hidden;"></div>
 
 	<div id="circlebox">
-		<p id="circle">&#9676;</p>
+		<img id="circle" src="circle.png">
 	</div>
 
 	<div id="figurebox">
@@ -55,7 +55,7 @@
 	</div>
 	
 	<div id="container3">
-		<audio id="vid3">
+		<a8[=8udio id="vid3">
     		<source src="1113_3new.mp3" type="audio/mp3">
 		</audio>
 	</div>
@@ -139,26 +139,26 @@
   </div>
 
  <div class='boxx'>
-  	<div class='wavee -one'></div>
-  	<div class='wavee -two'></div>
-  	<div class='wavee -three'></div>
+  	<div class='rot -one'></div>
+  	<div class='rot -two'></div>
+  	<div class='rot -three'></div>
   </div>
 
+  <img src="textpng.png" id="textpng">
+
+
  <div class='boxx2'>
-  	<div class='wavee2 -one2'></div>
-  	<div class='wavee2 -two2'></div>
-  	<div class='wavee2 -three2'></div>
+  	<div class='rot2 -one2'></div>
+  	<div class='rot2 -two2'></div>
+  	<div class='rot2 -three2'></div>
 </div>
 
 
  <div class='boxx3'>
-  	<div class='wavee3 -one3'></div>
-  	<div class='wavee3 -two3'></div>
-  	<div class='wavee3 -three'></div>
+  	<div class='rot3 -one3'></div>
+  	<div class='rot3 -two3'></div>
+  	<div class='rot3 -three'></div>
 </div>
-
-  <img src="textpng.png" id="textpng">
-
 
 <footer id="footer">
 
@@ -191,7 +191,7 @@
  </footer>
 
  <div class="dropdown">
-  <button class="dropbtn"> = </button>
+  <button id="dropbtn"class="dropbtn"> = </button>
   <div class="dropdown-content">
     <a href="#container">11월13일</a>
     <a href="#container4">11월17일</a>
@@ -201,6 +201,13 @@
     <a href="#container10">12월6일</a>
     <a href="#container11">12월9일</a>
   </div>
+</div>
+
+<div id="graybox">
+	<p style="font-size: 4em; color: black; text-align: center;  position:absolute;top:30%; left:10%;
+		-webkit-text-fill-color: white; 
+  		-webkit-text-stroke-width: 1px;
+  		-webkit-text-stroke-color: black;">이 사이트는 좌우 들리는 음성을 다르게 하여 <br> 메세지를 전달하는데에 목적을 두고 있습니다.<br> 이어폰을 착용한 후 화면을 클릭해 주세요.</p>
 </div>
 
 <!----------------------------------SVG---------------------------------->
@@ -622,15 +629,25 @@ window.onscroll = function(){
 	mySVG4.style.visibility="hidden";
 	textpng.style.visibility="hidden";
 
+	document.getElementById("vid1").volume = 0.6;
+	document.getElementById("vid2").volume = 0.6;
+	document.getElementById("vid3").volume = 0.6;
+	document.getElementById("vid4").volume = 0.6;
+	document.getElementById("vid5").volume = 0.6;
+	document.getElementById("vid6").volume = 0.6;
+	document.getElementById("vid7").volume = 0.6;
 
 	if(t<200){
 				date.innerHTML=" "
 				vid1.pause();
 				vid2.pause();
 				vid3.pause();
-	
+				vid4.pause();
+				vid5.pause();
 	}else if(t<990){
 					vid1.play();
+					vid4.pause();
+					vid5.pause();
 					date.innerHTML = "11월 13일"
 					date.style.position="fixed"
 	
@@ -638,6 +655,8 @@ window.onscroll = function(){
 						vid1.pause();
 						vid2.play();
 						vid3.pause();
+						vid4.pause();
+						vid5.pause();
 						date.innerHTML = "11월 13일"
 						date.style.position="fixed"
 
@@ -647,6 +666,7 @@ window.onscroll = function(){
 						vid2.pause();
 						vid3.play();
 						vid4.pause();
+						vid5.pause();
 						date.innerHTML = "11월 13일"
 						date.style.position="fixed"
 
@@ -689,6 +709,8 @@ window.onscroll = function(){
 						footer.style.color="black";
 						mySVG4.style.visibility="visible";
 						textpng.style.visibility="visible";
+						boxx.style.visibility="visible";
+						dropbtn.style.color="black";
 
 	}else if (t<6000) {
 						vid7.pause();
@@ -709,6 +731,7 @@ window.onscroll = function(){
 						footer.style.color="black";
 						mySVG4.style.visibility="visible";
 						textpng.style.visibility="visible";
+						boxx.style.visibility="visible";
 	
 	}else if (t<6400) {	
 						vid8.pause();
@@ -728,6 +751,7 @@ window.onscroll = function(){
 						footer.style.color="black";
 						mySVG4.style.visibility="visible";
 						textpng.style.visibility="visible";
+						boxx.style.visibility="visible";
 
 	}else if (t<7200) {	
 						vid9.pause();
@@ -747,6 +771,7 @@ window.onscroll = function(){
 						footer.style.color="black";
 						mySVG4.style.visibility="visible";
 						textpng.style.visibility="visible";
+						boxx.style.visibility="visible";
 
 
 	}else if (t<8200) {	
@@ -767,6 +792,7 @@ window.onscroll = function(){
 						footer.style.color="black";
 						mySVG4.style.visibility="visible";
 						textpng.style.visibility="visible";
+						boxx.style.visibility="visible";
 	
 
 	}else if (t<9200) {	
@@ -787,6 +813,7 @@ window.onscroll = function(){
 						mySVG4.style.visibility="visible";
 						mySVG4.style.visibility="visible";
 						textpng.style.visibility="visible";
+						boxx.style.visibility="visible";
 	
 
 	}else{				
@@ -804,6 +831,7 @@ window.onscroll = function(){
 						footer.style.color="black";
 						mySVG4.style.visibility="visible";
 						textpng.style.visibility="visible";
+						boxx.style.visibility="visible";
 			}
 
 }
@@ -875,7 +903,12 @@ function initClock() {
   window.setInterval("updateClock()", 1);
 }
 
+graybox.style.visibility="visible";
 
+graybox.onclick = function(){
+
+	graybox.style.visibility="hidden";
+}
 
 
 </script>
